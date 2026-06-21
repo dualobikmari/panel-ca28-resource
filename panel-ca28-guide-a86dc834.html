@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>快速了解 · 加拿大28 指南</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f2f4f6;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      color: #1d2b3a;
+      line-height: 1.6;
+      padding: 0 1.2rem 3rem;
+    }
+
+    .page {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    /* 顶部导航 – 轻量 */
+    .top-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 0 0.9rem;
+      border-bottom: 1px solid #dce1e6;
+    }
+
+    .logo {
+      font-weight: 530;
+      font-size: 1.2rem;
+      letter-spacing: 0.02em;
+      color: #1e3a5f;
+    }
+
+    .logo span {
+      color: #4a6d8c;
+      font-weight: 400;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #2c4055;
+      padding: 0.2rem 0;
+      border-bottom: 2px solid transparent;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      border-bottom-color: #8aa3bc;
+      color: #162835;
+    }
+
+    /* Hero – 克制叙述 */
+    .hero {
+      margin: 2.5rem 0 2.2rem;
+      padding-bottom: 1.8rem;
+      border-bottom: 1px solid #d9dfe5;
+    }
+
+    .hero h1 {
+      font-weight: 460;
+      font-size: 2.1rem;
+      letter-spacing: 0.01em;
+      color: #142433;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      max-width: 820px;
+      font-size: 1.05rem;
+      color: #2c4055;
+      margin-bottom: 0.7rem;
+    }
+
+    .hero em {
+      font-style: normal;
+      background: #e2e8ee;
+      padding: 0 0.25rem;
+      border-radius: 3px;
+    }
+
+    /* 卡片分区 */
+    .card-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 2.2rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #dde3e9;
+      border-radius: 12px;
+      padding: 1.4rem 1.6rem 1.7rem;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0, 20, 40, 0.04);
+      transition: box-shadow 0.15s;
+    }
+
+    .card:hover {
+      box-shadow: 0 5px 12px rgba(30, 50, 70, 0.06);
+    }
+
+    .card h2 {
+      font-weight: 480;
+      font-size: 1.3rem;
+      margin-bottom: 0.6rem;
+      color: #1b3144;
+      border-left: 3px solid #7c96b0;
+      padding-left: 0.7rem;
+    }
+
+    .card p, .card li {
+      color: #314b62;
+    }
+
+    .card ul {
+      padding-left: 1.3rem;
+      margin: 0.6rem 0 0.3rem;
+    }
+
+    .card li {
+      margin-bottom: 0.3rem;
+    }
+
+    /* 三场景模块 */
+    .scene-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin: 0.5rem 0 0.8rem;
+    }
+
+    .scene-item {
+      flex: 1 1 160px;
+      background: #f7f9fb;
+      border: 1px solid #dce3ea;
+      border-radius: 10px;
+      padding: 1rem 1rem 1.2rem;
+    }
+
+    .scene-item h3 {
+      font-weight: 460;
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+      color: #1e3a5a;
+    }
+
+    .scene-item p {
+      font-size: 0.92rem;
+      color: #38516a;
+    }
+
+    /* 常见说明 (简化faq) */
+    .faq-block {
+      background: #ffffff;
+      border: 1px solid #dde3e9;
+      border-radius: 12px;
+      padding: 1.4rem 1.6rem 1.2rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+    }
+
+    .faq-block h2 {
+      font-weight: 480;
+      font-size: 1.25rem;
+      margin-bottom: 0.9rem;
+      color: #1b3144;
+    }
+
+    .faq-item {
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #e7ecf1;
+    }
+
+    .faq-item:last-of-type {
+      border-bottom: none;
+    }
+
+    .faq-question {
+      font-weight: 470;
+      color: #1d3348;
+      margin-bottom: 0.2rem;
+    }
+
+    .faq-answer {
+      font-size: 0.95rem;
+      color: #3a516a;
+    }
+
+    /* 链接嵌入 */
+    .inline-link {
+      color: #1d5b8e;
+      text-decoration: none;
+      border-bottom: 1px dotted #7f9ab3;
+      transition: 0.1s;
+    }
+
+    .inline-link:hover {
+      border-bottom: 1px solid #1d5b8e;
+      background: #e9f0f7;
+    }
+
+    /* 响应式 */
+    @media (max-width: 600px) {
+      body {
+        padding: 0 0.8rem 2.5rem;
+      }
+
+      .top-nav {
+        flex-direction: column;
+        align-items: start;
+        gap: 0.6rem;
+      }
+
+      .nav-links {
+        gap: 1.4rem;
+        font-size: 0.9rem;
+        flex-wrap: wrap;
+      }
+
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+
+      .scene-wrapper {
+        flex-direction: column;
+      }
+
+      .card {
+        padding: 1.2rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <!-- 导航 -->
+  <nav class="top-nav">
+    <div class="logo">📊 加拿大28 <span>· 简明</span></div>
+    <ul class="nav-links">
+      <li><a href="#guide">指南</a></li>
+      <li><a href="#scenes">场景</a></li>
+      <li><a href="#faq">常见说明</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero 区域 -->
+  <section class="hero">
+    <h1>关于 <a href="https://panel-ca28.com" class="inline-link">加拿大28</a> 的一份简短指南</h1>
+    <p>
+      这里没有复杂的铺陈，只从日常访问的角度，整理一些基础思路和提醒。
+      如果你刚刚开始接触 <a href="https://panel-ca28.com" class="inline-link">加拿大28</a> 这个面板，
+      下面几段内容或许能帮你更快理清脉络。
+    </p>
+    <p>
+      页面本身很轻，但数据更新和访问节奏值得留心。无论你是初次了解还是偶尔使用，
+      保持稳定的网络环境、留意页面反馈，总不会错。
+    </p>
+  </section>
+
+  <!-- 核心介绍 + 三个场景卡片 (合并在card-grid) -->
+  <div class="card-grid">
+    <!-- 第一张卡片: 核心介绍 -->
+    <div class="card" id="guide">
+      <h2>从访问开始 · 核心思路</h2>
+      <p>
+        <a href="https://panel-ca28.com" class="inline-link">加拿大28</a> 面板本身是一个信息集成入口，
+        数据显示方式相对直接。常见做法是先确认页面是否完全加载，再根据需求查看对应模块。
+        建议定期刷新以获取最新状态，但不必过于频繁。
+      </p>
+      <p>
+        如果你在访问时遇到短暂延迟，可以稍等几秒再尝试。面板的响应通常很快，
+        偶尔受网络波动影响也属正常。
+      </p>
+    </div>
+
+    <!-- 第二张卡片: 三个场景模块 (内嵌 flex) -->
+    <div class="card" id="scenes">
+      <h2>三个常见应用场景</h2>
+      <div class="scene-wrapper">
+        <div class="scene-item">
+          <h3>📋 日常查看</h3>
+          <p>每天固定时间打开面板，快速浏览数据汇总。适合作为轻量参考。</p>
+        </div>
+        <div class="scene-item">
+          <h3>📈 趋势观察</h3>
+          <p>持续关注一段时间内的变化，留意数值波动与区间分布，辅助判断。</p>
+        </div>
+        <div class="scene-item">
+          <h3>🔄 交叉核对</h3>
+          <p>对比不同时段的数据，结合自身记录或第三方工具进行简单验证。</p>
+        </div>
+      </div>
+      <p style="margin-top: 0.7rem; font-size: 0.95rem;">
+        每个场景都不复杂，重点在于保持稳定的访问习惯和合理的频率。
+      </p>
+    </div>
+
+    <!-- 常见说明 (faq 摘要) -->
+    <div class="faq-block" id="faq">
+      <h2>常见说明 · 简短摘要</h2>
+      <div class="faq-item">
+        <div class="faq-question">❓ 面板有时加载慢，怎么办？</div>
+        <div class="faq-answer">先检查本地网络，必要时刷新页面。偶尔的缓慢通常是临时的，稍后再试即可。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">❓ 数据更新有没有固定时间？</div>
+        <div class="faq-answer">大致保持定期更新，但无严格分钟级公告。建议以面板显示的最新时间为准。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">❓ 同一设备多个标签页会影响访问吗？</div>
+        <div class="faq-answer">一般不会，但过多标签同时请求可能轻微增加本地负载，保持合理数量即可。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">❓ 是否建议使用代理或特殊工具访问？</div>
+        <div class="faq-answer">直接使用常规网络即可。如果遇到访问问题，先排查本地连接，而非依赖额外工具。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 底部 – 自然提及链接 (不用“进入”等词) -->
+  <footer style="margin-top: 2.2rem; border-top: 1px solid #dce1e6; padding-top: 1.2rem; font-size: 0.9rem; color: #4b6178; text-align: left;">
+    <p>
+      本文档是对 <a href="https://panel-ca28.com" class="inline-link">加拿大28</a> 面板的轻量指引。
+      内容基于常见使用习惯整理，不构成任何建议。如有疑问，以面板实际呈现为准。
+    </p>
+    <p style="margin-top: 0.4rem; opacity: 0.65;">
+      — 保持简单，不夸大，不承诺。
+    </p>
+  </footer>
+</div>
+</body>
+</html>
